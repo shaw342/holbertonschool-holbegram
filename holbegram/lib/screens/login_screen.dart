@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets/text_field.dart';
+import 'package:holbegram/widgets/text_field.dart';
 
 
 
@@ -35,7 +35,7 @@ class _LoginScreenState extends State<LoginScreen> {
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(height: 28),
             Text(
@@ -52,14 +52,14 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 children: [
                   TextFieldInput(
-                    controller: widget.emailController,
+                    controller: emailController,
                     isPassword: false,
                     hintText: 'Email',
-                    keyboardType: TextInputType.emailAddress,
+                    keyboardType: TextInputType.emailAddress, ispassword: false,
                   ),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   TextFieldInput(
-                    controller: widget.passwordController,
+                    controller: passwordController,
                     isPassword: !_passwordVisible,
                     hintText: 'Password',
                     keyboardType: TextInputType.visiblePassword,
@@ -73,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           _passwordVisible = !_passwordVisible;
                         });
                       },
-                    ),
+                    ), ispassword: false,
                   ),
                 ],
               ),
