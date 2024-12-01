@@ -5,6 +5,7 @@ import 'package:holbegram/widgets/text_field.dart';
 
 
 
+
 class LoginScreen extends StatefulWidget {
     const LoginScreen({super.key});
 
@@ -34,11 +35,11 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 28),
-            Text(
+            const SizedBox(height: 28),
+            const Text(
               'Holbegram',
               style: TextStyle(fontFamily: 'Billabong', fontSize: 50),
             ),
@@ -48,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 60,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
                   TextFieldInput(
@@ -78,25 +79,25 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 28),
+            const SizedBox(height: 28),
             SizedBox(
               height: 48,
               width: double.infinity,
               child: ElevatedButton(
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(
-                    Color.fromARGB(218, 226, 37, 24),
+                  backgroundColor: WidgetStateProperty.all(
+                    const Color.fromARGB(218, 226, 37, 24),
                   ),
                 ),
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   'Log in',
                   style: TextStyle(color: Colors.white),
                 ),
               ),
             ),
-            SizedBox(height: 24),
-            Row(
+            const SizedBox(height: 24),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text('Forgot your login details?'),
@@ -110,17 +111,17 @@ class _LoginScreenState extends State<LoginScreen> {
               flex: 0,
               child: Container(),
             ),
-            SizedBox(height: 24),
-            Divider(thickness: 2),
+            const SizedBox(height: 24),
+            const Divider(thickness: 2),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 12),
+              padding: const EdgeInsets.symmetric(vertical: 12),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Don't have an account?"),
+                  const Text("Don't have an account?"),
                   TextButton(
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       'Sign up',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -131,8 +132,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 10),
-            Row(
+            const SizedBox(height: 10),
+             const Row(
               children: [
                 Flexible(
                   child: Divider(thickness: 2),
@@ -143,7 +144,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ],
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Row(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -153,7 +154,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   width: 40,
                   height: 40,
                 ),
-                Text('Sign in with Google'),
+                const Text('Sign in with Google'),
               ],
             ),
           ],

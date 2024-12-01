@@ -60,33 +60,33 @@ class _SignUpState extends State<SignUp> {
                                 child: Column(
                                     children:[
                                         const SizedBox(height: 28),
-                                    Text(
+                                    const Text(
                                         'Sign up to see photos and videos\nfrom your friends.',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                             fontSize: 20,
                                         ),
                                     ),
-                            SizedBox(height: 28),
+                            const SizedBox(height: 28),
                     // SignUp Form
                             // Email TextField
                             TextFieldInput(
                                             controller: emailController,
                                             ispassword: false,
                                             hintText: 'Email',
-                                            keyboardType: TextInputType.emailAddress, isPassword: null,
+                                            keyboardType: TextInputType.visiblePassword, isPassword: false,
                                         ),
-                                        SizedBox(height: 24),
+                                        const SizedBox(height: 24),
                             // Username TextField
                             TextFieldInput(
                                             controller: usernameController,
                                             ispassword: false,
                                             hintText: 'Name',
-                                            keyboardType: TextInputType.name,
+                                            keyboardType: TextInputType.visiblePassword, isPassword: false,
                                         ),
                                         SizedBox(height: 24),
                             // Password TextField
-                            TextFieldInput(
+                             TextFieldInput(
                                             controller: passwordController,
                                             ispassword: !_passwordVisible,
                                             hintText: 'Password',
@@ -101,11 +101,11 @@ class _SignUpState extends State<SignUp> {
                                                     });
                                                 },
                                             ),
-                                            keyboardType: TextInputType.visiblePassword,
+                                            keyboardType: TextInputType.visiblePassword, isPassword: false,
                                         ),
-                                        SizedBox(height: 24),
+                                        const SizedBox(height: 24),
                             // Password Confirm TextField
-                            TextFieldInput(
+                                TextFieldInput(
                                             controller: passwordConfirmController,
                                             ispassword: !_passwordVisible,
                                             hintText: 'Confirm Password',
@@ -120,16 +120,16 @@ class _SignUpState extends State<SignUp> {
                                                     });
                                                 },
                                             ),
-                                            keyboardType: TextInputType.visiblePassword,
+                                            keyboardType: TextInputType.visiblePassword, isPassword: false,
                                         ),
-                                        SizedBox(height: 28),
+                                        const SizedBox(height: 28),
                     // SignUp Button
                                         SizedBox(
                                             height: 48,
                                             width: double.infinity,
                                             child: ElevatedButton(
                                                 style: ButtonStyle(
-                                                    backgroundColor: MaterialStateProperty.all(Color.fromARGB(218, 226, 37, 24),
+                                                    backgroundColor: MaterialStateProperty.all(const Color.fromARGB(218, 226, 37, 24),
                                                     ),
                                                 ),
                                             onPressed: () async {
@@ -144,7 +144,7 @@ class _SignUpState extends State<SignUp> {
                                                     ),
                                                 );
                                             },
-                                            child: Text(
+                                            child: const Text(
                                                 'Sign Up',
                                                 style: TextStyle(
                                                     color: Colors.white,
@@ -152,20 +152,20 @@ class _SignUpState extends State<SignUp> {
                                             ),
                                             ),
                                         ),
-                                        SizedBox(height: 24),
+                                        const SizedBox(height: 24),
                                     ],
                                 ),
                             ),
-                            Divider(
+                            const Divider(
                                 thickness: 2,
                             ),
                     // Login Button
                             Padding(
-                                padding: EdgeInsets.symmetric(vertical: 12),
+                                padding: const EdgeInsets.symmetric(vertical: 12),
                                 child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                        Text(
+                                        const Text(
                                             'Have an account?'),
                                         TextButton(
                                             onPressed: () {
@@ -176,7 +176,7 @@ class _SignUpState extends State<SignUp> {
                                                     ),
                                                 );
                                             },
-                                            child: Text(
+                                            child: const Text(
                                                 'Log In',
                                                 style: TextStyle(
                                                     fontWeight: FontWeight.bold,
